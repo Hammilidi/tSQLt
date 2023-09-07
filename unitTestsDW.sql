@@ -115,7 +115,7 @@ END;
 CREATE PROCEDURE Sales_Olap_Loading_DW_Tests.[TestTotalAmount] 
 AS
 BEGIN
-    -- Act (Action) : Vérifiez si toutes les valeurs de la colonne "Capacity" sont positives
+    -- Act (Action) : Vérifiez si toutes les valeurs de la colonne "TotalAmount" sont positives
     DECLARE @NegativeTotalAmount INT;
 	
     SELECT @NegativeTotalAmount = COUNT(*)
@@ -218,4 +218,4 @@ EXEC tSQLt.Run 'Sales_Olap_Loading_DW_Tests.[TestStockLevel]' ;
 
 --Exécution de tous les tests
 EXEC tSQLt.RunAll;
-
+EXEC tSQLt.Private_OutputTestResults;
